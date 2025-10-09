@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusBuddy", "CampusBuddy\CampusBuddy.csproj", "{280E2858-2F47-4EE0-8D5F-C6BC1412AC06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusBuddy.Tests", "CampusBuddy.Tests\CampusBuddy.Tests.csproj", "{7BA7D0EE-3B26-406C-8A8F-07E020738A5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{280E2858-2F47-4EE0-8D5F-C6BC1412AC06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280E2858-2F47-4EE0-8D5F-C6BC1412AC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280E2858-2F47-4EE0-8D5F-C6BC1412AC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280E2858-2F47-4EE0-8D5F-C6BC1412AC06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BA7D0EE-3B26-406C-8A8F-07E020738A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA7D0EE-3B26-406C-8A8F-07E020738A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA7D0EE-3B26-406C-8A8F-07E020738A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA7D0EE-3B26-406C-8A8F-07E020738A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F40295A-BB0B-4D33-8BFC-DB5FA1DC0D2A}
+	EndGlobalSection
+EndGlobal
