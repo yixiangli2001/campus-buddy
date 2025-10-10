@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "campus-buddy", "campus-buddy.csproj", "{D6862386-C608-4AC7-AA1C-A0DB047047AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusBuddy.Tests", "..\CampusBuddy.Tests\CampusBuddy.Tests.csproj", "{4C1E8B7D-E0B9-41E1-A7BF-BD1E82A4A8FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D6862386-C608-4AC7-AA1C-A0DB047047AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6862386-C608-4AC7-AA1C-A0DB047047AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6862386-C608-4AC7-AA1C-A0DB047047AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C1E8B7D-E0B9-41E1-A7BF-BD1E82A4A8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1E8B7D-E0B9-41E1-A7BF-BD1E82A4A8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1E8B7D-E0B9-41E1-A7BF-BD1E82A4A8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1E8B7D-E0B9-41E1-A7BF-BD1E82A4A8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
