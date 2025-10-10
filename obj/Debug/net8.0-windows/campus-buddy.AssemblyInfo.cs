@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("campus-buddy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+570358a6404af3abe601f84683a09f3d169f8928")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83cea7ad701ae8dc7c726a19fc7f563144ba9fad")]
 [assembly: System.Reflection.AssemblyProductAttribute("campus-buddy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("campus-buddy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

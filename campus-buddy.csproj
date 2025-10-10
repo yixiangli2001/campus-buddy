@@ -15,8 +15,6 @@
 
   <ItemGroup>
     <Folder Include="Forms\" />
-    <Folder Include="Data\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
