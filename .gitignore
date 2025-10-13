@@ -1,0 +1,23 @@
+@"
+# Visual Studio
+.vs/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rtifacts/
+
+
+
+# Logs & temp
+*.log
+*.tmp
+*.cache
+"@ | Out-File -Encoding utf8 -NoNewline .gitignore
