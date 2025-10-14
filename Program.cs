@@ -1,3 +1,4 @@
+using campus_buddy.Forms;
 namespace campus_buddy
 {
     internal static class Program
@@ -11,7 +12,7 @@ namespace campus_buddy
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }
