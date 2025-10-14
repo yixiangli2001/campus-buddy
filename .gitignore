@@ -1,1 +1,25 @@
-        .vs/
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rtifacts/
+
+# Logs & temp
+*.log
+.tmp/
+.cache/
+
+# Rider/JetBrains
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
