@@ -21,6 +21,12 @@ namespace campus_buddy.Helpers
             return (DateTime.Now - item.DateReported).TotalDays <= 7;
         }
 
+        // Extension method to check if an item is older than specified days
+        public static bool IsOlderThan(this Item item, int days)
+        {
+            return (DateTime.Now - item.DateReported).TotalDays > days;
+        }
+
         //extension method to get human-readable time since reported
         // usage: string time = item.GetTimeSinceReported();
 
