@@ -152,7 +152,7 @@ namespace campus_buddy.Services
             if (user ==null)
             {
                 //Create a default user
-                user = new User("Demo User", "demo@student.uts.edu.au", "password","250111111");
+                user = new User("Demo User", "demo@student.uts.edu.au", "250111111");
                 Users.Add(user);
                 SaveAllData();
             }
