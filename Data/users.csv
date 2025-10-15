@@ -1,0 +1,6 @@
+UserId,Name,Email,Password,PhoneNumber,RegisteredDate
+7a13b42f-5fd7-4a94-93b0-fb7b59a4e3c1,Alice Johnson,alice@example.com,1234,0400123456,2024-07-12
+2d87e291-384a-4cf0-bcb5-472ae3daae62,Bob Smith,bob@uni.edu,abcd,0411222333,2024-07-13
+a14c29de-7743-4f64-9f8b-8fd41a5b8a2e,Charlie Lee,charlie@uni.edu,pass,0422333444,2024-08-01
+b9c1f914-255b-4a3a-a611-8717c6c7f9aa,Danielle Wong,danielle@uni.edu,qwerty,0433555666,2024-08-14
+f2e1f5cd-18b5-43de-9127-7baf11a9f6b4,Edward Brown,edward@uni.edu,9999,0444777888,2024-09-05
