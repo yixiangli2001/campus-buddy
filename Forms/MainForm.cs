@@ -17,11 +17,13 @@ namespace campus_buddy.Forms
     {
         private DataService dataService;
         private MatchingService matchingService;
-        public MainForm()
+        private User currentUser;
+        public MainForm(User user)
         {
             InitializeComponent();
             dataService = DataService.Instance;
             matchingService = new MatchingService();
+            currentUser = user;
         }
 
         //Form Load Event
