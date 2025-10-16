@@ -13,9 +13,7 @@ namespace campus_buddy
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-<<<<<<< Updated upstream
-            Application.Run(new LoginForm());
-=======
+
             using (var loginForm = new LoginForm())
             {
                 var result = loginForm.ShowDialog(); 
@@ -28,7 +26,7 @@ namespace campus_buddy
                     return;
                 }
             }
->>>>>>> Stashed changes
+
         }
     }
 }
