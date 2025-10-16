@@ -16,10 +16,7 @@ namespace campus_buddy.Models
         public string UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime RegisteredDate { get; set; }
