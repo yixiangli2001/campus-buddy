@@ -9,11 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< Updated upstream
-=======
 using campus_buddy.Models;
 
->>>>>>> Stashed changes
 
 namespace campus_buddy.Forms
 {
