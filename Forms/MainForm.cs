@@ -17,6 +17,7 @@ namespace campus_buddy.Forms
     {
         private DataService dataService;
         private MatchingService matchingService;
+        private User usercurrentUser;
         public MainForm(User user)
         {
             InitializeComponent();
