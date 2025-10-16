@@ -17,6 +17,8 @@ namespace campus_buddy.Services
 
     public class DataService
     {
+        
+
         //file path
         private string dataDirectory;
         private string lostItemsFile;
@@ -30,13 +32,18 @@ namespace campus_buddy.Services
         public Repository<User> Users { get; private set; }
         public Repository<Notification> Notifications { get; private set; }
 
+        //Current user
+        public User? CurrentUser { get; private set; }
+        public event EventHandler? CurrentUserChanged;
+
+
         // Singleton instance
         private static DataService instance;
 
         //get the singleton instance of DataService
         public static DataService Instance
         {
-            get
+            get 
             {
                 if (instance == null)
                 {
@@ -76,6 +83,16 @@ namespace campus_buddy.Services
 
             //Load all existing data
             LoadAllData();
+
+            //Create a default user if no users exist
+            var user = Users.FindOne(u => true);
+
+            if (user == null)
+            {
+                CurrentUser = new User("Demo User", "demo@student.uts.edu.au", "password", "250111111");
+                Users.Add(CurrentUser);
+                SaveAllData();
+            }
         }
 
         //Saves all data to JSON files
@@ -147,17 +164,21 @@ namespace campus_buddy.Services
         //Gets the current user 
         public User GetCurrentUser()
         {
-            var user = Users.FindOne(u => true);
+            return CurrentUser;
+        }
 
-            if (user ==null)
-            {
-                //Create a default user
-                user = new User("Demo User", "demo@student.uts.edu.au", "250111111");
+        public void SetCurrentUser(User? user)
+        {
+            CurrentUser = user;
+            CurrentUserChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        //Adds a new user and saves
+        public void AddUser(User user)
+        {
+
                 Users.Add(user);
                 SaveAllData();
-            }
-
-            return user;
         }
 
         //Adds a lost item and saves
@@ -224,6 +245,14 @@ namespace campus_buddy.Services
             return dataDirectory;
         }
 
-
+        internal User UpdateUserDetails(User user, string name, string phone, string password)
+        {
+            user.Name = name;
+            user.PhoneNumber = phone;
+            user.Password = password;
+            Users.Update(u => u.UserId == user.UserId, user);
+            SaveAllData();
+            return user;
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace campus_buddy.Models
         public string UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+
+        public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime RegisteredDate { get; set; }
 
@@ -33,11 +35,12 @@ namespace campus_buddy.Models
         }
 
         // Constructor overloading
-        public User(string name, string email, string phone) : this()
+        public User(string name, string email, string password, string phone) : this()
         {
             Name = name;
             Email = email;
             PhoneNumber = phone;
+            Password = password;
         }
 
         // INotifiable implementation - REQUIRED by interface
