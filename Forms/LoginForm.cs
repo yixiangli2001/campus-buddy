@@ -34,16 +34,7 @@ namespace campus_buddy.Forms
 
             if (!res.IsSuccess)
             {
-<<<<<<< Updated upstream
-                MessageBox.Show(res.ErrorText(), "Login failed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            MessageBox.Show($"Welcome {res.User!.Name}!", "Login successful");
-            var mainForm = new MainForm(res.User); 
-            mainForm.Show();
-=======
                 MessageBox.Show(res.ErrorText(), "Login failed.",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -54,7 +45,6 @@ namespace campus_buddy.Forms
             this.Tag = res.User;
             this.DialogResult = DialogResult.OK;
             this.Close();
->>>>>>> Stashed changes
         }
     }
 }
