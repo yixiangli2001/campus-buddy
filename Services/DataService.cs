@@ -173,14 +173,6 @@ namespace campus_buddy.Services
             CurrentUserChanged?.Invoke(this, EventArgs.Empty);
         }
 
-        //Adds a new user and saves
-        public void AddUser(User user)
-        {
-
-                Users.Add(user);
-                SaveAllData();
-        }
-
         //Adds a lost item and saves
         public void AddLostItem(LostItem item)
         {
@@ -245,14 +237,20 @@ namespace campus_buddy.Services
             return dataDirectory;
         }
 
-        internal User UpdateUserDetails(User user, string name, string phone, string password)
-        {
-            user.Name = name;
-            user.PhoneNumber = phone;
-            user.Password = password;
+        internal User UpdateUserDetails(User user)
+        { 
             Users.Update(u => u.UserId == user.UserId, user);
             SaveAllData();
             return user;
+        }
+
+
+        internal void AddUser(User user)
+        {
+
+
+            Users.Add(user);
+            SaveAllData();
         }
     }
 }

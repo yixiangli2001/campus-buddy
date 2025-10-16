@@ -26,7 +26,17 @@ namespace campus_buddy.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            User user = DataService.Instance.UpdateUserDetails(DataService.Instance.CurrentUser, txtName.Text, txtPhone.Text, txtPassword.Text);
+            User user = new User(txtName.Text, emailText.Text, txtPassword.Text, txtPhone.Text);
+            ValidationService validationService = new ValidationService();
+            var validationResult = validationService.ValidateUser(user);
+            if (!validationResult.IsValid)
+            {
+                string errors = string.Join("\n", validationResult.Errors);
+                MessageBox.Show(errors, "Validation Errors", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DataService.Instance.UpdateUserDetails(user);
             DataService.Instance.SetCurrentUser(user);
             this.Tag = DataService.Instance.CurrentUser;
             this.Close();

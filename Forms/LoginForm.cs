@@ -43,5 +43,14 @@ namespace campus_buddy.Forms
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+
+            var signup = new SignupForm();
+            var result = signup.ShowDialog(this);
+
+            
+        }
     }
 }
