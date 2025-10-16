@@ -49,11 +49,8 @@
             // txtEmail
             // 
             txtEmail.Location = new Point(209, 96);
-<<<<<<< Updated upstream
-            txtEmail.Margin = new Padding(2, 2, 2, 2);
-=======
+
             txtEmail.Margin = new Padding(2);
->>>>>>> Stashed changes
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(104, 23);
             txtEmail.TabIndex = 1;
@@ -71,25 +68,18 @@
             // txtPassword
             // 
             txtPassword.Location = new Point(209, 124);
-<<<<<<< Updated upstream
-            txtPassword.Margin = new Padding(2, 2, 2, 2);
-            txtPassword.Name = "txtPassword";
-=======
             txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '•';
->>>>>>> Stashed changes
             txtPassword.Size = new Size(104, 23);
             txtPassword.TabIndex = 3;
             // 
             // title
             // 
             title.AutoSize = true;
-<<<<<<< Updated upstream
-            title.Font = new Font("Segoe UI", 18F);
-=======
+
             title.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
->>>>>>> Stashed changes
+
             title.Location = new Point(139, 40);
             title.Margin = new Padding(2, 0, 2, 0);
             title.Name = "title";
@@ -100,11 +90,9 @@
             // btnLogin
             // 
             btnLogin.Location = new Point(187, 172);
-<<<<<<< Updated upstream
-            btnLogin.Margin = new Padding(2, 2, 2, 2);
-=======
+
             btnLogin.Margin = new Padding(2);
->>>>>>> Stashed changes
+
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(76, 20);
             btnLogin.TabIndex = 5;
@@ -124,11 +112,9 @@
             Controls.Add(passwordLabel);
             Controls.Add(txtEmail);
             Controls.Add(emailLabel);
-<<<<<<< Updated upstream
-            Margin = new Padding(2, 2, 2, 2);
-=======
+
             Margin = new Padding(2);
->>>>>>> Stashed changes
+
             Name = "LoginForm";
             Text = "LoginForm";
             ResumeLayout(false);
