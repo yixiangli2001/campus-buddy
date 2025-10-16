@@ -167,12 +167,6 @@ namespace campus_buddy.Services
             return CurrentUser;
         }
 
-<<<<<<< Updated upstream
-            if (user ==null)
-            {
-                //Create a default user
-                user = new User("Demo User", "demo@student.uts.edu.au", "password","250111111");
-=======
         public void SetCurrentUser(User? user)
         {
             CurrentUser = user;
@@ -182,7 +176,7 @@ namespace campus_buddy.Services
         //Adds a new user and saves
         public void AddUser(User user)
         {
->>>>>>> Stashed changes
+
                 Users.Add(user);
                 SaveAllData();
         }
