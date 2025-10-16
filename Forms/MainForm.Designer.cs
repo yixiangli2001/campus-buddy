@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelTop = new Panel();
+            btnMyAccount = new Button();
             btnRefresh = new Button();
             btnNotifications = new Button();
             btnMyPosts = new Button();
@@ -39,6 +40,7 @@
             dgvLostItems = new DataGridView();
             tabPage2 = new TabPage();
             dgvFoundItems = new DataGridView();
+            btnLogout = new Button();
             panelTop.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -50,6 +52,8 @@
             // panelTop
             // 
             panelTop.BackColor = Color.LightGray;
+            panelTop.Controls.Add(btnLogout);
+            panelTop.Controls.Add(btnMyAccount);
             panelTop.Controls.Add(btnRefresh);
             panelTop.Controls.Add(btnNotifications);
             panelTop.Controls.Add(btnMyPosts);
@@ -61,10 +65,21 @@
             panelTop.Size = new Size(1200, 60);
             panelTop.TabIndex = 0;
             // 
+            // btnMyAccount
+            // 
+            btnMyAccount.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMyAccount.Location = new Point(560, 12);
+            btnMyAccount.Name = "btnMyAccount";
+            btnMyAccount.Size = new Size(120, 35);
+            btnMyAccount.TabIndex = 5;
+            btnMyAccount.Text = "My Account";
+            btnMyAccount.UseVisualStyleBackColor = true;
+            btnMyAccount.Click += btnMyAccount_Click;
+            // 
             // btnRefresh
             // 
-            btnRefresh.Font = new Font("Segoe UI", 10F);
-            btnRefresh.Location = new Point(740, 12);
+            btnRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRefresh.Location = new Point(876, 12);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(120, 35);
             btnRefresh.TabIndex = 4;
@@ -74,8 +89,8 @@
             // 
             // btnNotifications
             // 
-            btnNotifications.Font = new Font("Segoe UI", 10F);
-            btnNotifications.Location = new Point(560, 12);
+            btnNotifications.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNotifications.Location = new Point(698, 12);
             btnNotifications.Name = "btnNotifications";
             btnNotifications.Size = new Size(160, 35);
             btnNotifications.TabIndex = 3;
@@ -85,7 +100,7 @@
             // 
             // btnMyPosts
             // 
-            btnMyPosts.Font = new Font("Segoe UI", 10F);
+            btnMyPosts.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnMyPosts.Location = new Point(420, 12);
             btnMyPosts.Name = "btnMyPosts";
             btnMyPosts.Size = new Size(120, 35);
@@ -96,7 +111,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Font = new Font("Segoe UI", 10F);
+            btnSearch.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnSearch.Location = new Point(260, 12);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(140, 35);
@@ -108,7 +123,7 @@
             // btnAddItem
             // 
             btnAddItem.BackColor = Color.DodgerBlue;
-            btnAddItem.Font = new Font("Segoe UI", 10F);
+            btnAddItem.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnAddItem.ForeColor = Color.White;
             btnAddItem.Location = new Point(20, 12);
             btnAddItem.Name = "btnAddItem";
@@ -123,7 +138,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Font = new Font("Segoe UI", 10F);
+            tabControl1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             tabControl1.Location = new Point(0, 60);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -160,7 +175,7 @@
             tabPage2.Location = new Point(4, 26);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1192, 560);
+            tabPage2.Size = new Size(1192, 388);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Found Items";
             tabPage2.UseVisualStyleBackColor = true;
@@ -175,8 +190,19 @@
             dgvFoundItems.Location = new Point(3, 3);
             dgvFoundItems.Name = "dgvFoundItems";
             dgvFoundItems.ReadOnly = true;
-            dgvFoundItems.Size = new Size(1186, 554);
+            dgvFoundItems.Size = new Size(1186, 382);
             dgvFoundItems.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogout.Location = new Point(1068, 12);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(120, 35);
+            btnLogout.TabIndex = 6;
+            btnLogout.Text = "Log Out";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // MainForm
             // 
@@ -211,5 +237,7 @@
         private System.Windows.Forms.DataGridView dgvLostItems;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dgvFoundItems;
+        private System.Windows.Forms.Button btnMyAccount;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

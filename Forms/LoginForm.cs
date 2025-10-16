@@ -9,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< Updated upstream
+=======
+using campus_buddy.Models;
+
+>>>>>>> Stashed changes
 
 namespace campus_buddy.Forms
 {
@@ -29,6 +34,7 @@ namespace campus_buddy.Forms
 
             if (!res.IsSuccess)
             {
+<<<<<<< Updated upstream
                 MessageBox.Show(res.ErrorText(), "Login failed",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -37,6 +43,18 @@ namespace campus_buddy.Forms
             MessageBox.Show($"Welcome {res.User!.Name}!", "Login successful");
             var mainForm = new MainForm(res.User); 
             mainForm.Show();
+=======
+                MessageBox.Show(res.ErrorText(), "Login failed.",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DataService.Instance.SetCurrentUser(res.User);
+
+            MessageBox.Show($"Welcome {res.User!.Name}!", "Login successful");
+            this.Tag = res.User;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+>>>>>>> Stashed changes
         }
     }
 }

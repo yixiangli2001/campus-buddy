@@ -10,6 +10,9 @@
     <Compile Update="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\MyAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\MyPostsForm.cs">
       <SubType>Form</SubType>
     </Compile>
