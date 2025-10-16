@@ -17,10 +17,6 @@ namespace campus_buddy.Forms
     {
         private DataService dataService;
         private MatchingService matchingService;
-<<<<<<< Updated upstream
-        private User currentUser;
-=======
->>>>>>> Stashed changes
         public MainForm(User user)
         {
             InitializeComponent();
