@@ -17,11 +17,13 @@ namespace campus_buddy.Forms
     {
         private DataService dataService;
         private MatchingService matchingService;
-        public MainForm()
+        public MainForm(User user)
         {
             InitializeComponent();
             dataService = DataService.Instance;
+            dataService.SetCurrentUser(user);
             matchingService = new MatchingService();
+
         }
 
         //Form Load Event
@@ -211,7 +213,7 @@ namespace campus_buddy.Forms
         // Update notification badge count
         private void UpdateNotificationBadge()
         {
-            var user = dataService.GetCurrentUser();
+            var user = dataService.CurrentUser;
             var unreadCount = user.GetUnreadCount();
             btnNotifications.Text = $"Notifications ({unreadCount})";
         }
@@ -254,5 +256,42 @@ namespace campus_buddy.Forms
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btnMyAccount_Click(object sender, EventArgs e)
+        {
+
+            var myAccountForm = new MyAccountForm();
+            myAccountForm.ShowDialog();
+            if (myAccountForm.Tag is User updatedUser)
+            {
+                DataService.Instance.SetCurrentUser(updatedUser);
+                MessageBox.Show("Account updated successfully!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+            // Hide main form
+            this.Hide();
+
+            //Show login form
+            using (var login = new LoginForm())
+            {
+                var result = login.ShowDialog(this);
+
+                if (result == DialogResult.OK && login.Tag is User user)
+                {
+                    DataService.Instance.SetCurrentUser(user);
+                    UpdateNotificationBadge();
+                    this.Show();
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+        }
     }
 }
